@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Path GPS Solutions | Financial Overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #faf9f6;
+      color: #2d2d2d;
+      line-height: 1.6;
+    }
+    header {
+      background: #264653;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    h2 {
+      color: #264653;
+      border-left: 6px solid #f4a261;
+      padding-left: 1rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    .chart-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    ul, li {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    footer {
+      background: #e9c46a;
+      text-align: center;
+      padding: 1.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Path GPS Logo">
+    <h1>Path GPS Solutions</h1>
+    <p>Financial Overview & Growth Metrics</p>
+  </header>
+
+  <section>
+    <h2>Revenue Growth</h2>
+    <div class="chart-container">
+      <canvas id="revenueChart"></canvas>
+    </div>
+
+    <h2>Cash Flow Growth</h2>
+    <div class="chart-container">
+      <canvas id="cashFlowChart"></canvas>
+    </div>
+
+    <h2>Market Capitalization Projection</h2>
+    <div class="chart-container">
+      <canvas id="marketCapChart"></canvas>
+    </div>
+  </section>
+
+  <section>
+    <h2>Venture Capital Funding</h2>
+    <ul>
+      <li><strong>Seed Round:</strong> $500,000 from Angel Investors</li>
+      <li><strong>Series A:</strong> $3.0M from Venture Capital Firms</li>
+      <li><strong>Series B:</strong> $10.0M from Institutional Investors</li>
+    </ul>
+
+    <h2>Operating Expenses</h2>
+    <ul>
+      <li>R&D: $2.0M</li>
+      <li>Sales & Marketing: $2.5M</li>
+      <li>General & Administrative: $1.5M</li>
+      <li>COGS: $1.0M</li>
+      <li>Depreciation & Amortization: $0.5M</li>
+    </ul>
+
+    <h2>Balance Sheet Highlights</h2>
+    <ul>
+      <li>Cash & Equivalents: $5.0M</li>
+      <li>Accounts Receivable: $2.0M</li>
+      <li>Property, Plant & Equipment: $4.0M</li>
+      <li>Intangible Assets (Software): $2.0M</li>
+      <li><strong>Total Assets:</strong> $13.0M</li>
+    </ul>
+
+    <h2>Key Performance Indicators</h2>
+    <ul>
+      <li>Gross Margin: 75%</li>
+      <li>Customer Acquisition Cost: $40</li>
+      <li>Monthly Active Users: 70,000</li>
+      <li>Churn Rate: 3%</li>
+    </ul>
+
+    <h2>Customer Satisfaction Metrics</h2>
+    <ul>
+      <li>Net Promoter Score: 80</li>
+      <li>Customer Retention Rate: 88%</li>
+      <li>Average Response Time: 1 hour</li>
+    </ul>
+
+    <h2>Product Sales Growth</h2>
+    <ul>
+      <li>GPS Trackers: 10,000 (2025) → 75,000 (2029)</li>
+      <li>Fleet Management Software: 500 → 5,000</li>
+      <li>Mobile App Subscriptions: 2,000 → 20,000</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 Path GPS Solutions — Built with clarity, guided by data.
+  </footer>
+
+  <script>
+    new Chart(document.getElementById('revenueChart'), {
+      type: 'line',
+      data: {
+        labels: ['2025', '2026', '2027', '2028', '2029'],
+        datasets: [{
+          label: 'Revenue ($M)',
+          data: [2.5, 5.0, 12.0, 20.0, 35.0],
+          borderColor: '#2a9d8f',
+          backgroundColor: 'rgba(42,157,143,0.2)',
+          fill: true
+        }]
+      }
+    });
+
+    new Chart(document.getElementById('cashFlowChart'), {
+      type: 'line',
+      data: {
+        labels: ['2025', '2026', '2027', '2028', '2029'],
+        datasets: [{
+          label: 'Net Cash Flow ($M)',
+          data: [-1.0, -0.5, 3.0, 6.0, 12.0],
+          borderColor: '#e76f51',
+          backgroundColor: 'rgba(231,111,81,0.2)',
+          fill: true
+        }]
+      }
+    });
+
+    new Chart(document.getElementById('marketCapChart'), {
+      type: 'line',
+      data: {
+        labels: ['2025', '2026', '2027', '2028', '2029'],
+        datasets: [{
+          label: 'Market Cap ($M)',
+          data: [50, 100, 180, 250, 300],
+          borderColor: '#f4a261',
+          backgroundColor: 'rgba(244,162,97,0.2)',
+          fill: true
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
